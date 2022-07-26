@@ -7,22 +7,24 @@ payment = 2684.11
 extraPayment = 1000
 extraPaymentStart = 61
 extraPaymentEnd = 108
-total_paid = 0.0
+totalPaid = 0.0
 months = 0
 
 while principal > 0:
     if months < extraPaymentEnd:
         principal = principal * (1+rate/12) - payment - extraPayment
-        total_paid = total_paid + payment + extraPayment
+        totalPaid = totalPaid + payment + extraPayment
         months = months + 1
-        print(months, total_paid, principal)
+        # print(months, total_paid, principal)
+        print(f'Months: {months} Total Paid: {totalPaid} Principal: {principal}')
     else:
         principal = principal * (1+rate/12) - payment
-        total_paid = total_paid + payment
+        totalPaid = totalPaid + payment
         months = months + 1
-        print(months, total_paid, principal)
+        # print(months, total_paid, principal)
+        print(f'Months: {months} Total Paid: {totalPaid:0.2f} Principal: {principal:0.2f}')
 
-print('Total paid: ', total_paid)
+print(f'Total paid: {totalPaid:0.2f}')
 print('Months: ', months)
 
 
