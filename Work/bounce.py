@@ -1,5 +1,5 @@
 # bounce.py
-# test
+# test2
 # Exercise 1.5
 height = 100
 dropDecrease = 3/5
